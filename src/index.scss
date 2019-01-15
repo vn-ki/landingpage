@@ -65,6 +65,9 @@ section {
         flex-direction: column;
         bottom: -300px;
     }
+    @media (max-width: 600px) {
+        align-items: center;
+    }
 }
 .cardcontainer {
     position: relative;
