@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:900');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
+
+
 $color-dark: #1a1a1d;
 $color-grey: #4e4e50;
 $color-white: #d3d3d3;
@@ -16,12 +20,21 @@ body {
     background: $color-bg;
 }
 
-h1.name {
-    font-size: 6rem;
-    padding: 40px;
-    font-family: "Playfair Display";
+.header {
+    h1.name{
+        font-size: 6rem;
+        margin: 40px 0 0 40px;
+        font-family: "Playfair Display";
+    }
+    h2 {
+        margin: 0 0 0 40px;
+        font-family: "Josefin Sans";
+        letter-spacing: 4px;
+        font-weight: normal;
+    }
     color: $color-white;
 }
+
 
 .header {
     width: fit-content;
@@ -40,47 +53,56 @@ h1.name {
 }
 
 section {
-  position: absolute;
-  padding: 50px;
-  display: flex;
-  width: calc( 100% - 100px);
-  float: right;
-  bottom: 0px;
-  justify-content: flex-end;
-  @media (max-width: 1000px) {
-      align-items: flex-end;
-      flex-direction: column;
-      bottom: -300px;
-  }
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    width: calc( 100% - 100px);
+    float: right;
+    bottom: 0px;
+    justify-content: flex-end;
+    @media (max-width: 1000px) {
+        align-items: flex-end;
+        flex-direction: column;
+        bottom: -300px;
+    }
 }
 .cardcontainer {
-  position: relative;
-  transition: all 0.2s ease-in-out;
-  margin: 10px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    margin: 10px;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
-.hovercard {
+.card {
     padding: 10px;
     font-family: 'Playfair Display';
     background: $color-white;
-  border-radius: 50px;
-  background: white;
-  width: 300px;
-  height: 100px;
+    border-radius: 50px;
+    background: white;
+    width: 300px;
+    height: 100px;
+    h1 {
+        margin-bottom: 10px;
+    }
+    p {
+        font-family: 'Roboto Mono', monospace;
+    }
 }
 
 .shadow {
-  position: relative;
-  border-radius: 4px;
-  box-shadow: 0px 0px 20px 1px #e8e8e8;
-  &::before {
-    z-index:-111;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: 70%;
-    width: 70%;
-    left: 50%;
-transform: translateX(-50%);
-     box-shadow: 0px 10px 80px 5px #9a9a9a;
-  }
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px 1px #e8e8e8;
+    &::before {
+        z-index:-111;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 70%;
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0px 10px 80px 5px #9a9a9a;
+    }
 }
