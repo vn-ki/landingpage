@@ -18,6 +18,10 @@ $color-bg: #d7e5f1;
 
 body {
     background: $color-bg;
+    overflow: hidden;
+    @media (max-width: 1000px) {
+        overflow: auto;
+    }
 }
 
 .header {
